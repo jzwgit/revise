@@ -37,7 +37,6 @@ public class JdkProxyExample implements InvocationHandler {
         System.out.println("在调度真实对象之前的服务");
         Object obj = method.invoke(target,args);//相当于调用sayHelloWorld方法
         System.out.println("在调度方法之后");
-
         return obj;
     }
 
@@ -47,6 +46,6 @@ public class JdkProxyExample implements InvocationHandler {
         //绑定关系,因为挂在接口HelloWorld下，所以声明代理对象HelloWorld proxy
         HelloWorld proxy = (HelloWorld)jdkProxyExample.bind(new HelloWorldImpl());
         //此时HelloWorld对象已经是一个代理对象，它会进入代理的逻辑方法
-        proxy.sayHelloWorld();
+        proxy.sayHelloWorld("张三");
     }
 }

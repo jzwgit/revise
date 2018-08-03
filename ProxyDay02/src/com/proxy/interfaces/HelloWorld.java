@@ -1,5 +1,5 @@
 package com.proxy.interfaces;
 
 public interface HelloWorld {
-    public void sayHelloWorld();
+    public void sayHelloWorld(String name);
 }

@@ -43,7 +43,7 @@ public class InterceptorJdkProxy implements InvocationHandler {
             return method.invoke(target,args);
         }
         Object result = null;
-        //通过反射生成拦截器
+        //通过反射生成拦截器 
         Interceptor interceptor = (Interceptor)Class.forName(interceptorClass).newInstance();
         //调用前置方法
         if(interceptor.before(proxy,target,method,args)){

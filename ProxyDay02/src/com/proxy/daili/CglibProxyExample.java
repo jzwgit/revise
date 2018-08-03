@@ -47,6 +47,6 @@ public class CglibProxyExample implements MethodInterceptor {
     public void testCGLIBProxy(){
         CglibProxyExample cpe = new CglibProxyExample();
         HelloWorldImpl helloWorld = (HelloWorldImpl)cpe.getProxy(HelloWorldImpl.class);
-        helloWorld.sayHelloWorld();
+        helloWorld.sayHelloWorld("张三");
     }
 }
